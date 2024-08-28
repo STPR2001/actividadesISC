@@ -1,0 +1,31 @@
+extends layout
+
+block content
+  h1 Actividad Semáforo
+
+  p
+    label Modo de operación:
+      label(id="lbl_modo_status") Normal / Mantenimiento
+  p
+   input(type="button", value="Normal", id="btn_normal", class="btn btn-primary")
+  p
+    input(type="button", value="Mantenimiento", id="btn_mantenimiento", class="btn btn-warning")
+  
+  table.table.table-bordered
+    thead
+      tr
+        th Estado del Semáforo
+        th LED Rojo
+        th LED Amarillo
+        th LED Verde
+    tbody
+      tr
+        td Estado LED:
+        td
+          label(id="lbl_rojo_status") ON/OFF
+        td
+          label(id="lbl_amarillo_status") ON/OFF
+        td
+          label(id="lbl_verde_status") ON/OFF
+
+  
